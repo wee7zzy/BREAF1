@@ -53,6 +53,21 @@ public class Main{
         }
     }
 
+    public static void factorielle(int a){
+        int i,fact=1;
+        System.out.printf("entrer nombre = ");
+        a=scanner.nextInt();
+        if(a<0){
+            System.out.println("IMPOSSIBLE pour les nombres positive");
+        }else{
+            for(i=1;i<=a;i++){
+                fact=fact*i;
+            }
+            System.out.println("Le factorielle de "+a+ " = "+fact);
+        }
+
+    }
+
     public static void main(String[] args) {
         int choix, a = 0, b = 0;
 
@@ -84,13 +99,16 @@ public class Main{
                 case 6:
                     racinecarree(a);
                     break;
+                case 7 :
+                    factorielle(a);
+                    break;
                 default:
                    System.out.println("CHOIX INVALIDE RESSAYER");
                     break;
             }
 
 
-        } while (choix !=5);
+        } while (choix !=7);
         scanner.close();
     }
 }
