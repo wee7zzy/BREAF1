@@ -28,6 +28,13 @@ public class Main{
         System.out.println("la multiplication a*b =" + (a*b));
     }
 
+    public static void division(double a,double b){
+        if(b==0){
+            System.out.println("la division par 0 est impossible");
+        }else
+            System.out.println("la division a/b =" +(a/b));
+    }
+
     public static void main(String[] args) {
         int choix, a = 0, b = 0;
 
@@ -50,13 +57,16 @@ public class Main{
                 case 3:
                     multiplication(a, b);
                     break;
+                case 4:
+                    division(a,b);
+                    break;
                 default:
                     System.out.println("CHOIX INVALIDE RESSAYER");
                     break;
             }
 
 
-        } while (choix !=3);
+        } while (choix !=4);
         scanner.close();
     }
 }
