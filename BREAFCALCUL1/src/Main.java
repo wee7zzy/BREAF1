@@ -16,6 +16,9 @@ public class Main{
                 "8-QUITTER\n" +
                 "----------ENTRER VOTRE CHOIX =");
     }
+    public static void addition(int a, int b) {
+        System.out.println("la somme a+b =" + (a+b));
+    }
 
     public static void main(String[] args) {
         int choix, a = 0, b = 0;
@@ -29,8 +32,17 @@ public class Main{
                 System.out.print("entrer b :");
                 b = scanner.nextInt();
             }
+switch (choix) {
+                case 1:
+                    addition(a, b);
+                    break;
+default:
+                    System.out.println("CHOIX INVALIDE RESSAYER");
+                    break;
+            }
 
-        } while (choix != 8);
+
+        } while (choix != 1);
         scanner.close();
     }
 }
