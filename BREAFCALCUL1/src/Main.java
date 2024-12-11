@@ -24,6 +24,10 @@ public class Main{
         System.out.println("la soutraction a-b =" + (a-b));
     }
 
+    public static void multiplication(int a , int b){
+        System.out.println("la multiplication a*b =" + (a*b));
+    }
+
     public static void main(String[] args) {
         int choix, a = 0, b = 0;
 
@@ -43,13 +47,16 @@ public class Main{
                 case 2:
                     soustraction(a, b);
                     break;
+                case 3:
+                    multiplication(a, b);
+                    break;
                 default:
                     System.out.println("CHOIX INVALIDE RESSAYER");
                     break;
             }
 
 
-        } while (choix !=2);
+        } while (choix !=3);
         scanner.close();
     }
 }
