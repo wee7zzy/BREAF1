@@ -102,13 +102,16 @@ public class Main{
                 case 7 :
                     factorielle(a);
                     break;
+               case 8:
+                    System.out.println("MERCI D'UTILISER LA CALCULATRICE ET A BIENTOT");
+                    break;
                 default:
                    System.out.println("CHOIX INVALIDE RESSAYER");
                     break;
             }
 
 
-        } while (choix !=7);
+        } while (choix !=8);
         scanner.close();
     }
 }
