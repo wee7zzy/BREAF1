@@ -28,6 +28,14 @@ public class Main{
         System.out.println("la multiplication a*b =" + (a*b));
     }
 
+    public static void puissance(int base,int exposant){
+        System.out.print("entrer base :");
+        base=scanner.nextInt();
+        System.out.print("entrer exposant :");
+        exposant=scanner.nextInt();
+        System.out.println(base + "  a la puissance  " + exposant + "  = " + Math.pow(base,exposant));
+    }
+
     public static void division(double a,double b){
         if(b==0){
             System.out.println("la division par 0 est impossible");
@@ -60,13 +68,16 @@ public class Main{
                 case 4:
                     division(a,b);
                     break;
+                case 5:
+                    puissance(a,b);
+                    break;
                 default:
                     System.out.println("CHOIX INVALIDE RESSAYER");
                     break;
             }
 
 
-        } while (choix !=4);
+        } while (choix !=5);
         scanner.close();
     }
 }
