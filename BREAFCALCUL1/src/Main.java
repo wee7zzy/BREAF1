@@ -9,8 +9,8 @@ public class Main{
                 "1-ADDITION \n" +
                 "2-SOUSTRACTION \n" +
                 "3-MULTIPLICATION \n" +
-                "4-DIVISION \n" +
-                "5-PUISSANCE \n" +
+                "4-PUISSANCE \n" +
+                "5-DIVISION \n" +
                 "6-RACINE CARRE \n" +
                 "7-FACTORIELLE \n" +
                 "8-QUITTER\n" +
@@ -43,6 +43,16 @@ public class Main{
             System.out.println("la division a/b =" +(a/b));
     }
 
+    public static void racinecarree(int nmbr){
+        System.out.printf("entrer nombre = ");
+        nmbr=scanner.nextInt();
+        if(nmbr<0){
+            System.out.println("la racine carree d'un nombre negative est impossible ");
+        }else{
+            System.out.println("la racine carree de "+ nmbr +  " = "+Math.sqrt(nmbr));
+        }
+    }
+
     public static void main(String[] args) {
         int choix, a = 0, b = 0;
 
@@ -66,13 +76,16 @@ public class Main{
                     multiplication(a, b);
                     break;
                 case 4:
-                    division(a,b);
-                    break;
-                case 5:
                     puissance(a,b);
                     break;
+                case 5:
+                    division(a,b);
+                    break;
+                case 6:
+                    racinecarree(a);
+                    break;
                 default:
-                    System.out.println("CHOIX INVALIDE RESSAYER");
+                   System.out.println("CHOIX INVALIDE RESSAYER");
                     break;
             }
 
