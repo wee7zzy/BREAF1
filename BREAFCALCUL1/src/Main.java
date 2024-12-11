@@ -20,6 +20,10 @@ public class Main{
         System.out.println("la somme a+b =" + (a+b));
     }
 
+    public static void soustraction(int a, int b) {
+        System.out.println("la soutraction a-b =" + (a-b));
+    }
+
     public static void main(String[] args) {
         int choix, a = 0, b = 0;
 
@@ -32,17 +36,20 @@ public class Main{
                 System.out.print("entrer b :");
                 b = scanner.nextInt();
             }
-switch (choix) {
+            switch (choix) {
                 case 1:
                     addition(a, b);
                     break;
-default:
+                case 2:
+                    soustraction(a, b);
+                    break;
+                default:
                     System.out.println("CHOIX INVALIDE RESSAYER");
                     break;
             }
 
 
-        } while (choix != 1);
+        } while (choix !=2);
         scanner.close();
     }
 }
